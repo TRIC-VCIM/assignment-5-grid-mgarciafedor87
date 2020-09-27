@@ -1,0 +1,312 @@
+/*-----Basic Styling to override defaults--------*/
+body
+{
+  margin: 0;
+  background-image: url("Images/bkgd.jpg");
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+h1 {
+    display: block;
+    font-size: 1.9em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: bold;
+    color: rgb(245, 45, 45);
+}
+h2 {
+    display: block;
+    font-size: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: bold;
+}
+h3 {
+    display: block;
+    font-size: 1.0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: bold;
+}
+p 
+{
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.45em;
+}
+a
+{
+  text-decoration: none;
+  color: white;
+}
+img
+{
+  max-width: 100%;
+  margin:auto;
+  display: block;
+}
+.decorative-text
+{
+  font-family: 'Nosifer', cursive;
+}
+
+/* -----------First Grid Level Styling ---------*/
+.site-grid 
+{
+  margin: 0;
+  padding: 1%;
+  position: relative;
+  max-width: 100%;
+  max-height: auto;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  grid-template-rows: 3.2em 1.8fr 1fr;
+  grid-template-areas: "title text-section"
+  "must-dos-section text-section"
+  "must-dos-section must-haves-section";
+  grid-gap: 1%;
+  border: 1px blue solid;
+}
+
+/* -----------Main Title Styling ---------*/
+.sg-child-page-title 
+{   position: relative;
+    padding: 1%;
+    grid-area: title;
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 3px rgb(68, 5, 5);
+}
+.special-text-decoration1
+{
+  color: white;
+  font-family: 'Nosifer', cursive;
+  font-size: 1.5em;
+}
+.special-text-decoration2
+{
+  color: orange;
+  font-size: 1.25em;
+}
+
+/* -----------Text Section Styling ---------*/
+.sg-child-text-content {
+    background-color: rgba(255, 255,255, 0.75);
+    border: 2px rgb(170, 19, 19) solid;
+    color: rgb(26, 26, 26);
+    grid-area: text-section;
+    border-radius: 15px;
+    padding: 0.5em;
+}
+.sg-child-text-content h2
+{
+  font-size: 1.5em;
+}
+
+.sg-child-text-content p
+{
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+/* -----------Must-Do Section Styling ----Second Grid---------*/
+.sg-child-parent2-halloween-must-dos-content {
+    padding: 0;
+    grid-area: must-dos-section;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 0.4fr 0.16fr 0.4fr 0.16fr;
+    grid-template-areas: "must-do-heading must-do-heading"
+    "image1 image2"
+    "subheader1 subheader2"
+    "image3 image4"
+    "subheader3 subheader4";
+    grid-gap: 0.25em;
+}
+
+.hmdc-child-heading
+{
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    grid-area: must-do-heading;
+    background-color: rgba(0, 0,0, 0.5);
+    border: 2px rgb(170, 19, 19) solid;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.sg-child-parent2-halloween-must-dos-content div
+{
+
+    position: relative;
+    background-color: rgba(0, 0,0, 0.5);
+    border: 2px rgb(170, 19, 19) solid;
+    text-align: center;
+    margin:0;
+}
+
+.hmdc-child-subheading
+{
+    margin: 3%;
+    font-size: 1.25em;
+    color: #fff;
+}
+
+
+.hmdc-child-subheading:hover
+{
+  color: orange;
+}
+
+.hmdc-child-image-haunted-locations
+{
+    grid-area: image1;
+}
+.hmdc-child-subheadings1
+{
+  grid-area: subheader1;
+}
+.hmdc-child-image-haunted-attractions
+{
+    border-width: 2px 0px 2px 2px;
+    grid-area: image2;
+}
+.hmdc-child-subheadings2
+{
+  grid-area: subheader2;
+}
+.hmdc-child-image-halloween-events
+{
+    grid-area: image3;
+}
+.hmdc-child-subheadings3
+{
+  grid-area: subheader3;
+}
+.hmdc-child-image-halloween2020
+{
+    background-color: #f418a0;
+    grid-area: image4;
+}
+.hmdc-child-subheadings4
+{
+  grid-area: subheader4;
+}
+
+/* -----------Must-Haves Section Styling----Third Grid---------*/
+.sg-child-parent3-halloween-must-haves-content 
+{
+    grid-area: must-haves-section;
+    border-radius: 15px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3.2em 0.6fr 0.35fr;
+    grid-template-areas: "must-have-heading must-have-heading"
+    "mhimage1 mhimage2"
+    "mhtext1 mhtext2";
+    grid-gap: 0.25em;
+
+    color: white;
+
+}
+.hmhc-child-heading
+{
+    font-size: 1.5em;
+    padding: 0.5em;
+    grid-area: must-have-heading;
+    border-radius: 15px 15px 0px 0px;
+    color: white;
+    background-color: rgba(0, 0,0, 0.5);
+    border: 2px rgb(170, 19, 19) solid;
+}
+.hmhc-child-pumpkin-picking-image
+{
+  grid-area: mhimage1;
+  border: 2px rgb(170, 19, 19) solid;
+}
+
+.hmhc-child-candy-image
+{
+  grid-area: mhimage2;
+   border: 2px rgb(170, 19, 19) solid;
+}
+
+.hmhc-child-pumpkin-picking-text
+{
+  grid-area: mhtext1;
+  background-color: rgba(0, 0,0, 0.5);
+  border: 2px rgb(170, 19, 19) solid;
+  padding: 0.3em;
+  line-height: 1em;
+}
+
+.hmhc-child-candy-text
+{
+ grid-area: mhtext2;
+ background-color: rgba(0, 0,0, 0.5);
+ border: 2px rgb(170, 19, 19) solid;
+ padding: 0.3em;
+ line-height: 1em;
+}
+
+.sg-child-parent3-halloween-must-haves-content a:hover
+{
+  color: orange;
+}
+
+/*--------------footer styling---------------*/
+.footer-content {
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em 4%;
+    margin: 0em;
+    box-sizing: border-box;
+    height: 2.5rem;  
+
+    background-color: rgb(26, 26, 26);
+    color: white;
+
+}
+.works-cited
+{
+  position: relative;
+  float:left;
+}
+
+.works-cited a
+{
+ color: orange;
+}
+.my-name
+{
+  position: relative;
+  float:right;
+}
+
+/*--------------works-cited styling---------------*/
+.text-works-cited
+{
+  color:white;
+   background-color: rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+  font-size: 1.2em;
+  margin:1%;
+  padding: 1%;
+}
+.text-works-cited h2
+{
+  font-family: 'Nosifer', cursive;
+  color: orange;
+  font-size: 1.5em;
+}
+
